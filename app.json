@@ -4,53 +4,32 @@
     "slug": "joyventory",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.yourcompany.joyventory",
-      "infoPlist": {
-        "NSCameraUsageDescription": "This app uses the camera to scan barcodes."
-      }
+      "bundleIdentifier": "com.yourcompany.joyventory"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.yourcompany.joyventory",
-      "permissions": ["CAMERA"]
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "package": "com.yourcompany.joyventory"
     },
     "plugins": [
-      [
-        "expo-barcode-scanner",
-        {
-          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera to scan barcodes."
-        }
-      ],
-      [
-        "expo-camera",
-        {
-          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
-        }
-      ]
+      "expo-updates"
     ],
     "sdkVersion": "52.0.0",
-    "experiments": {
-      "typedRoutes": false,
-      "tsconfigPaths": false
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/your-project-id",
+      "enabled": true,
+      "fallbackToCacheTimeout": 0
     },
-    "newArchEnabled": true
+    "extra": {
+      "apiUrl": "http://localhost:3000/api",
+      "eas": {
+        "projectId": "your-project-id"
+      }
+    }
   }
 } 
